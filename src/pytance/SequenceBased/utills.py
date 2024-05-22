@@ -1,14 +1,32 @@
 def gestalt_pattern_matching(pattern, text):
-    # str2our gestalt pattern matching logic here
-    # This could involve comparing patterns based on structure, not just characters
+    """
+    Perform gestalt pattern matching between a pattern and a text.
+
+    Parameters:
+    pattern (str): The pattern to match.
+    text (str): The text to search for the pattern.
+
+    Returns:
+    bool: True if the pattern is found in the text, False otherwise.
+    """
+    # Implement your gestalt pattern matching logic here
     # This example simply checks if the pattern is a substring of the text
     if pattern in text:
         return True
     else:
         return False
 
-
 def longest_common_subsequence(str1, str2):
+    """
+    Calculate the longest common subsequence (LCS) between two strings.
+
+    Parameters:
+    str1 (str): The first input string.
+    str2 (str): The second input string.
+
+    Returns:
+    str: The longest common subsequence.
+    """
     # Check if both inputs are strings
     if not isinstance(str1, str) or not isinstance(str2, str):
         raise TypeError("Both inputs must be strings.")
@@ -41,7 +59,16 @@ def longest_common_subsequence(str1, str2):
     return ''.join(lcs_seq)
 
 def longest_common_substring(str1, str2):
-    
+    """
+    Calculate the longest common substring between two strings.
+
+    Parameters:
+    str1 (str): The first input string.
+    str2 (str): The second input string.
+
+    Returns:
+    str: The longest common substring.
+    """
     # Check if both inputs are strings
     if not isinstance(str1, str) or not isinstance(str2, str):
         raise TypeError("Both inputs must be strings.")
