@@ -16,4 +16,4 @@ def dist(word1, word2, function_name = 'hamming'):
     if function_name in functions:
         return functions[function_name](word1, word2)
     else:
-        raise ValueError(f"No such function: {function_name}")
+        raise ValueError(f"No such function: {function_name} in CharacterBased")

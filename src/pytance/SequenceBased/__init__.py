@@ -1,8 +1,14 @@
-#   -------------------------------------------------------------
-#   Copyright (c) Microsoft Corporation. All rights reserved.
-#   Licensed under the MIT License. See LICENSE in project root for information.
-#   -------------------------------------------------------------
-"""Python Package Template"""
-from __future__ import annotations
 
-__version__ = "0.0.2"
+from .utills import longest_common_subsequence, longest_common_substring
+from . import utills
+
+__all__ = ["longest_common_subsequence", "longest_common_substring"]
+
+def dist(word1, word2, function_name):
+    # Dynamically call the function based on the function_name argument
+    if hasattr(utills, function_name):
+        func = getattr(utills, function_name)
+        return func(word1, word2)
+    else:
+        raise ValueError(f"No such function: {function_name} in SequenceBased")
+
