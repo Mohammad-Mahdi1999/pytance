@@ -5,9 +5,9 @@ build-backend = "flit.buildapi"
 [project]
 name =  "py-project-toml"
 authors = [
-    {name = "Daniel Ciborowski", email = "dciborow@microsoft.com"},
+    {name = "Mahdi Farahbakhsh", email = "mahdi.farahbakhsh99@gmail.com"},
 ]
-description = "Sample Python Project for creating a new Python Module"
+description = "The pytance library is a fast and efficient implementation of the edit distance algorithms in Python"
 readme = "README.md"
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -47,12 +47,12 @@ test = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/microsoft/python-package-template/tree/main#readme"
-Source = "https://github.com/microsoft/python-package-template"
-Tracker = "https://github.com/microsoft/python-package-template/issues"
+Documentation = "https://github.com/Mohammad-Mahdi1999/pytance/tree/main#readme"
+Source = "https://github.com/Mohammad-Mahdi1999/pytance/"
+Tracker = "https://github.com/Mohammad-Mahdi1999/pytance//issues"
 
 [tool.flit.module]
-name = "python_package"
+name = "pytance"
 
 [tool.bandit]
 exclude_dirs = ["build","dist","tests","scripts"]

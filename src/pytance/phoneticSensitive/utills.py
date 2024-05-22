@@ -1,10 +1,18 @@
 def editex(str1, str2):
-    # Your Editex algorithm logic here
-    # This is a simplified example and may need further refinement for specific use cases
+    
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     return 1 if s1 == s2 else 0
 
 
 def smith_waterman(s1, s2, match_score=2, mismatch_penalty=-1, gap_penalty=-1):
+    
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     m, n = len(s1), len(s2)
     matrix = [[0] * (n + 1) for _ in range(m + 1)]
 
@@ -24,7 +32,10 @@ def smith_waterman(s1, s2, match_score=2, mismatch_penalty=-1, gap_penalty=-1):
     return max_score, indices
 
 def syllable_alignment(word1, word2):
-    # Your syllable alignment logic here
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     # This is a simplified example and may need further refinement for specific use cases
     syllables1 = syllabify(word1)
     syllables2 = syllabify(word2)
@@ -33,6 +44,5 @@ def syllable_alignment(word1, word2):
     return alignment_score
 
 def syllabify(word):
-    # Your syllabification logic here
-    # This is a simplified example and may need further refinement for specific use cases
+   
     return [syllable.strip() for syllable in word.split('-')]

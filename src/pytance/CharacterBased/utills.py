@@ -1,4 +1,8 @@
 def hamming_distance(str1, str2):
+    
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+    
     if len(str1) != len(str2):
         raise ValueError("Hamming distance is defined only for strings of equal length.")
     
@@ -11,6 +15,11 @@ def hamming_distance(str1, str2):
     return distance
 
 def damerau_levenshtein_distance(str1, str2):
+    
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     m, n = len(str1), len(str2)
     
     # Initialize a matrix to store costs
@@ -38,6 +47,11 @@ def damerau_levenshtein_distance(str1, str2):
     return dp[m][n]
 
 def jaro_distance(str1, str2):
+    
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     # Calculate the length of the strings
     len_str1, len_str2 = len(str1), len(str2)
 
@@ -79,6 +93,10 @@ def jaro_distance(str1, str2):
     return jaro_similarity
 
 def levenshtein_distance(str1, str2):
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     m, n = len(str1), len(str2)
     
     # Initialize a matrix to store costs
@@ -102,6 +120,11 @@ def levenshtein_distance(str1, str2):
     return dp[m][n]
 
 def jaro_winkler_distance(str1, str2, p=0.1):
+    
+    # Check if both inputs are strings
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both inputs must be strings.")
+        
     jaro_dist = jaro_distance(str1, str2)  # Change variable name to avoid conflict
 
     # Calculate the common prefix length
