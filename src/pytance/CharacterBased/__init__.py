@@ -1,4 +1,6 @@
 
+from __future__ import annotations
+
 from .utills import hamming_distance, damerau_levenshtein_distance, jaro_distance, levenshtein_distance,jaro_winkler_distance
 # from . import utills
 
